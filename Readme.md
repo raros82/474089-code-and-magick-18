@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Роман Рацеев](https://up.htmlacademy.ru/javascript/18/user/474089).
-* Наставник: `Олег Скляров`.
+* Наставник: `Неизвестно`.
 
 ---
 
