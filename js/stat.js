@@ -18,9 +18,9 @@ var renderCloud = function (ctx, x, y, color) {
 };
 
 var getMaxElement = function (arr) {
-  var maxElement = 0;
-  for (var t = 0; t < arr.length; t++) {
-    var currentElement = arr[t];
+  var maxElement = arr[0];
+  for (var i = 1; i < arr.length; i++) {
+    var currentElement = arr[i];
     if (currentElement > maxElement) {
       maxElement = currentElement;
     }
@@ -29,8 +29,11 @@ var getMaxElement = function (arr) {
 };
 
 var getRandomInteger = function (min, max) {
-  var RandomInteger = min + Math.random() * (max + 1 - min);
-  return Math.floor(RandomInteger);
+  return Math.floor(min + Math.random() * (max - min + 1));
+};
+
+var getBlueWithRandomSaturation = function () {
+  return 'hsl(240, ' + getRandomInteger(0, 100) + '%, 50%)';
 };
 
 window.renderStatistics = function (ctx, names, times) {
@@ -52,7 +55,7 @@ window.renderStatistics = function (ctx, names, times) {
     if (names[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     } else {
-      ctx.fillStyle = 'hsl(240, ' + getRandomInteger(0, 100) + '%, 50%)';
+      ctx.fillStyle = getBlueWithRandomSaturation();
     }
     ctx.fillRect(DIAGRAM_X_SHIFT + (BAR_WIDTH + BAR_GAP) * i, DIAGRAM_STARTING_POINT, BAR_WIDTH, currentHeight);
   }
