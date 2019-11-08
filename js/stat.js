@@ -63,3 +63,4 @@ window.renderStatistics = function (ctx, names, times) {
 
 // дописал строчку для module5-task1
 // дописал строчку для module6-task1
+// дописал строчку для module7-task1
