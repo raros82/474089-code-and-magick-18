@@ -61,3 +61,4 @@ window.renderStatistics = function (ctx, names, times) {
   }
 };
 
+// дописал строчку для module5-task1
